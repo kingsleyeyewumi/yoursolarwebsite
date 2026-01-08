@@ -1,0 +1,129 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+
+  /* Front Page Nav Bar start here */
+  --frontPage-nav-background-color: rgba(3, 79, 104, 0.9);
+  /* Front Page Nav Bar ends here */
+
+  /* Main body start here */
+  --mainBody-background-color: rgba(70, 110, 130, 0.2);
+  /* Main body ends here */
+
+  /* Load Audit start here */
+  --reserve-color: rgba(254, 173, 21, 0.9);
+  --mibile-load-audit-nav-background: rgba(12, 117, 187, 0.8);
+  --mobile-nav-header-background: rgba(255, 255, 255, 0.9);
+  --nav-right-left-arrow-color: rgba(255, 255, 255, 0.9);
+  --nav-left-right-hover-background: rgba(255, 255, 255, 0.9);
+  --nav-left-right-hover-color: rgba(244, 8, 8, 0.8);
+  --button-background-color: rgba(255, 255, 255, 0.9);
+  --button-font-color: rgba(244, 8, 8, 0.9);
+  --button-box-shadow: 0.2rem 0.2rem 0.1rem rgba(12, 117, 187, 0.9);
+  --total-WH-totalPower-W-background: rgba(12, 117, 187, 0.9);
+  --total-WH-totalPower-W-color: rgba(255, 255, 255, 0.9);
+  --successful-submit-tag-background: rgba(13, 190, 13, 0.7);
+  --successful-submit-tag-color: rgba(255, 255, 255, 0.9);
+  --unsuccessful-submit-tag-background: rgba(237, 103, 103, 0.7);
+  --unsuccessful-submit-tag-color: rgba(255, 255, 255, 0.9);
+  /* Load Audit ends here */
+
+  /* Battery Audit start here */
+  --reserve-color: rgba(247, 85, 26, 0.8);
+  --nav-background-color: rgba(12, 117, 187, 0.8);
+  --nav-header-font-background-color: rgba(255, 255, 255, 0.9);
+  --nav-left-right-hover-color: rgba(12, 117, 187, 0.8);
+  --main-wrapper-background-color: rgba(255, 255, 255, 0.9);
+  --main-wrapper-children-background-color: rgba(70, 110, 130, 0.2);
+  --main-wrapper-children-box-shadow: 0.3rem 0.3rem 0.2rem
+    rgba(12, 117, 187, 0.9);
+  --input-field-border: 0.09rem solid rgba(12, 117, 187, 0.8);
+  --input-field-font-color: rgba(12, 117, 187, 0.8);
+  --label-transition-color: rgba(247, 85, 26, 0.8);
+  --submit-to-proceed-background: rgba(255, 255, 255, 0.9);
+  --submit-to-proceed-box-shadow: 0.2rem 0.2rem 0.1rem 0.3rem
+    rgba(12, 117, 187, 0.6);
+  --submit-to-proceed-font-color: rgba(12, 117, 187, 0.8);
+  --submit-hover-background-color: rgba(247, 85, 26, 0.8);
+  --submit-hover-font-color: rgba(255, 255, 255, 0.9);
+  /* Battery Audit ends here */
+
+  /* Pannel Audit start here */
+  --paannel-nav-background-color: rgba(98, 21, 21, 0.8);
+  --pannel-nav-header-name-background: rgba(13, 147, 192, 0.8);
+  --nav-right-left-arrow-hover-background: rgba(13, 147, 192, 0.8);
+  --output-field-title-color: rgba(13, 147, 192, 0.8);
+  --output-field-font-color: rgba(12, 127, 166, 0.8);
+  --label-transition-font-color: rgba(98, 21, 21, 0.8);
+  --panel-submit-hover-background-color: rgba(98, 21, 21, 0.8);
+  --panel-output-field-box-shadow: 0.3rem 0.3rem 0.2rem rgba(98, 21, 21, 0.8);
+  --panel-submit-to-proceed-box-shadow: 0.2rem 0.2rem 0.1rem 0.3rem
+    rgba(98, 21, 21, 0.8);
+  --panel-submit-to-proceed-hover-box-shadow: 0.2rem 0.2rem 0.1rem 0.3rem
+    rgba(13, 147, 192, 0.8);
+  /* Pannel Audit ends here */
+
+  /* Charge Controller Start Here */
+  --charge-control-nav-background: rgba(73, 186, 230, 0.8);
+  --charge-control-nav-header-name-background: rgba(125, 125, 228, 0.8);
+  --charge-control-output-field-color: rgba(125, 125, 228, 0.8);
+  --charge-control-output-field-box-shadow: 0.3rem 0.3rem 0.2rem
+    rgba(125, 125, 228, 0.8);
+  --charge-control-output-font-color: rgba(73, 186, 230, 0.8);
+  --charge-control-submit-to-proceed-box-shadow: 0.2rem 0.2rem 0.1rem 0.3rem
+    rgba(125, 125, 228, 0.8);
+  --charge-control-submit-hover-background-color: rgba(125, 125, 228, 0.8);
+  --charge-control-submit-to-proceed-hover-box-shadow: 0.2rem 0.2rem 0.1rem
+    0.2rem rgba(73, 186, 230, 0.8);
+  --charge-control-submit-to-proceed-color: rgba(125, 125, 228, 0.8);
+  --charge-control-input-field-font-color: rgba(125, 125, 228, 0.8);
+  --charge-control-submit-to-proceed-hover-color: rgba(133, 212, 244, 0.8);
+  --charge-control-label-transition-font-color: rgba(133, 212, 244, 0.8);
+  /* Charge Controller End Here */
+
+  /* Inverter Start */
+  --inverter-nav-background: rgba(50, 141, 142, 0.8);
+  --inverter-header-name-background-color: rgba(131, 42, 176, 0.8);
+  --inverter-output-font-color: rgba(131, 42, 176, 0.8);
+  --inverter-output-field-color: rgba(50, 141, 142, 0.8);
+  --inverter-output-field-box-shadow: 0.3rem 0.3rem 0.2rem
+    rgba(50, 141, 142, 0.8);
+  --inverter-input-field-border: 0.09rem solid rgba(131, 42, 176, 0.8);
+  --inverter-input-field-font-color: rgba(131, 42, 176, 0.8);
+  --inverter-label-transition-font-color: rgba(50, 141, 142, 0.8);
+  --inverter-submit-to-proceed-box-shadow: 0.2rem 0.2rem 0.1rem 0.3rem
+    rgba(131, 42, 176, 0.8);
+  --inverter-submit-to-proceed-font-color: rgba(131, 42, 176, 0.8);
+  --inverter-submit-hover-background-color: rgba(50, 141, 142, 0.8);
+  --inverter-submit-to-proceed-hover-color: rgba(131, 42, 176, 0.8);
+  --inverter-submit-to-proceed-hover-box-shadow: 0.2rem 0.2rem 0.1rem 0.2rem
+    rgba(131, 42, 176, 0.8);
+  /* Inverter End */
+
+  /* Solar Cable Start */
+  --solar-cable-nav-background: rgba(83, 201, 248, 0.8);
+  --solar-cable-header-name-background: rgba(255, 255, 255, 0.9);
+  --solar-cable-input-field-border: 0.09rem solid rgba(83, 201, 248, 0.8);
+  --solar-cable-input-field-font-color: rgba(83, 201, 248, 0.8);
+  --solar-cable-label-transition-font-color: rgba(183, 144, 44, 0.8);
+  --solar-cable-output-font-color: rgba(183, 144, 44, 0.8);
+  --solar-cable-output-field-box-shadow: 0.3rem 0.3rem 0.2rem
+    rgba(83, 201, 248, 0.8);
+  --solar-cable-submit-hover-background-color: rgba(83, 201, 248, 0.8);
+  --solar-cable-submit-to-proceed-hover-box-shadow: 0.2rem 0.2rem 0.1rem 0.2rem
+    rgba(183, 144, 44, 0.8);
+  --solar-cable-submit-to-proceed-hover-color: rgba(183, 144, 44, 0.8);
+  --solar-cable-submit-to-proceed-box-shadow: 0.2rem 0.2rem 0.1rem 0.3rem
+    rgba(83, 201, 248, 0.8);
+  --solar-cable-submit-to-proceed-font-color: rgba(183, 144, 44, 0.8);
+  /* Solar Cable End */
+
+  /* About start here */
+  --nav-menu-active-color: rgba(3, 79, 104, 0.9);
+  --nav-menu-active-background-color: rgba(152, 206, 241, 0.8);
+  /* About ends here */
+}

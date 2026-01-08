@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Carocell start here */
+.carocellContainer {
+  grid-area: carocellContainer;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 0.5rem;
+}
+
+.carocellHolder {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  /* border: 2px solid white; */
+  background-image: url(../../IMAGES/kingphoto.jpg);
+  background-size: 100%;
+  border-radius: 50%;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.carocellHolder .fa-solid {
+  color: whitesmoke;
+}
+
+.hideCarousel {
+  display: block;
+}
+/* Carocell ends here */

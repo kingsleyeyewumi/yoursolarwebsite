@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  grid-area: nav;
+  /* border: 2px solid rgb(29, 29, 150); */
+  background-color: var(--frontPage-nav-background-color);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "logoContainer otherItemsContainer otherItemsContainer otherItemsContainer otherItemsContainer otherItemsContainer otherItemsContainer carocellContainer";
+  position: sticky;
+  top: 0px;
+  min-height: 4rem;
+}
+
+/* Other Nav items start  */
+.otherItemsContainer {
+  grid-area: otherItemsContainer;
+  /* border: 2px solid gold; */
+  border-radius: 0.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "home"
+    "about"
+    "services"
+    "calcBtn"
+    "contact";
+  position: absolute;
+  right: -8.3rem;
+  top: 4rem;
+  background: var(--nav-items-container-background);
+  gap: 2rem;
+  min-width: 15rem;
+  padding: 1rem;
+  animation: upDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.otherItemsHide {
+  display: none;
+  animation: shockIn;
+  animation-duration: 1s;
+}
+
+@keyframes upDown {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes shockIn {
+  0% {
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Other Nav items end  */

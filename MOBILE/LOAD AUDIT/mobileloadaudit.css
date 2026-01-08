@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loadAuditFrontPage {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 2rem auto;
+  grid-template-areas:
+    "nav"
+    "main";
+  /* border: 2px solid rgba(0, 0, 0, 0.5); */
+}

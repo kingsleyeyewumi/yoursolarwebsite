@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Home start */
+.home {
+  grid-area: home;
+  /* border: 2px solid red; */
+  min-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home a {
+  /* border: 2px solid red; */
+  border-radius: 0.3rem;
+  color: rgb(223, 223, 247);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.home:hover {
+  background: rgba(152, 206, 241, 0.8);
+}
+/* Home end */

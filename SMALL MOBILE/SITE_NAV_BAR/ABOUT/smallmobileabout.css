@@ -1,0 +1,43 @@
+/* About start */
+.about {
+  grid-area: about;
+  /* border: 2px solid red; */
+  min-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about a {
+  /* border: 2px solid red; */
+  border-radius: 0.3rem;
+  color: var(--about-color);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.about:hover {
+  background: var(--about-hover-background);
+}
+
+a.active {
+  color: var(--nav-menu-active-color);
+  background-color: var(--nav-menu-active-background-color);
+  padding: 1rem;
+}
+
+h1::first-letter {
+  font-size: 5rem;
+  color: rgba(8, 81, 105, 0.8);
+}
+h1 {
+  color: rgba(238, 157, 8, 0.8);
+}
+span {
+  color: rgba(8, 81, 105, 0.8);
+}
+/* About end */

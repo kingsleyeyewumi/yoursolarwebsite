@@ -1,0 +1,596 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main start here */
+main {
+  grid-area: main;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-columns: auto;
+  padding: 2rem;
+}
+
+/* main-wrapper-container start here */
+.main-wrapper-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  min-height: 100vh;
+  background-color: var(--main-wrapper-background-color);
+  border-radius: 1rem;
+  grid-template-areas:
+    "right-child-container"
+    "left-child-container";
+  gap: 2rem;
+}
+/* main-wrapper-container ends here */
+
+/* left-child-container start here */
+.left-child-container {
+  grid-area: left-child-container;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  grid-template-areas:
+    "total-energy-consumption-holder"
+    "total-energy-KW"
+    "actual-battery-capacity-holder"
+    "actual-battery-KWH-holder"
+    "adjusted-battery-AH-holder"
+    "adjusted-battery-KWH-holder"
+    "number-of-battery-holder"
+    "number-of-battery-adjusted-holder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Left-container-children stsrt */
+/* Total-Energy-consumption-holder start */
+.left-child-container .total-energy-consumption-holder {
+  grid-area: total-energy-consumption-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.total-energy-consumption-holder .total-energy-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.totalEnergyConsumptionValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Total-Energy-consumption-holder end */
+
+/* total-energy-KW start */
+.left-child-container .total-energy-KW {
+  grid-area: total-energy-KW;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.total-energy-KW .total-energy-KW-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.totalEnergyKWValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* total-energy-KW end */
+
+/* Actual-Battery-Capacity-holder-start */
+.left-child-container .actual-battery-capacity-holder {
+  grid-area: actual-battery-capacity-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.actual-battery-capacity-holder .actual-battery-capacity-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.actualBatteryCapacityValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Actual-Battery-Capacity-holder-end */
+
+/* Actual-Battery-Capacity-(KWH)-holder-start */
+.left-child-container .actual-battery-KWH-holder {
+  grid-area: actual-battery-KWH-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.actual-battery-KWH-holder .actual-battery-KWH-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.actualBatteryKWHValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Actual-Battery-Capacity-(KWH)-holder-end */
+
+/* Adjusted-Battery-Capacity-(AH)-holder-start */
+.left-child-container .adjusted-battery-AH-holder {
+  grid-area: adjusted-battery-AH-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.adjusted-battery-AH-holder .adjusted-battery-AH-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.adjustedBatteryAHValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Adjusted-Battery-Capacity-(AH)-holder-end */
+
+/* Adjusted-Battery-Capacity-(KWH)-holder-start */
+.left-child-container .adjusted-battery-KWH-holder {
+  grid-area: adjusted-battery-KWH-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.adjusted-battery-KWH-holder .adjusted-battery-KWH-title {
+  position: absolute;
+  left: 6.5rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.adjustedBatteryKWHValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Adjusted-Battery-Capacity-(KWH)-holder-end */
+
+/* Number-Of-Battery-(AH)-holder-start */
+.left-child-container .number-of-battery-holder {
+  grid-area: number-of-battery-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.number-of-battery-holder .number-of-battery-title {
+  position: absolute;
+  left: 2.5rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.numberOfBatteryValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Number-Of-Battery-(AH)-holder-end */
+
+/* Number-Of-Battery-Adjusted-(AH)-holder-start */
+.left-child-container .number-of-battery-adjusted-holder {
+  grid-area: number-of-battery-adjusted-holder;
+  display: grid;
+  min-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--main-wrapper-children-box-shadow);
+  position: relative;
+}
+.number-of-battery-adjusted-holder .number-of-battery-adjusted-title {
+  position: absolute;
+  left: 2rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: rgba(247, 85, 26, 0.8);
+  font-weight: bold;
+}
+.numberOfBatteryAdjustedValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: rgba(12, 117, 187, 0.9);
+}
+/* Number-Of-Battery-Adjusted-(AH)-holder-end */
+/* Left-container-children end */
+/* left-child-container ends here */
+
+/* Right-child-container start here */
+.right-child-container {
+  grid-area: right-child-container;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    "battery-volt-holder"
+    "daysOfAutonomyHolder"
+    "deptOfDischargeHolder"
+    "marginalSafetyHolder"
+    "batteryEfficiencyHolder"
+    "batterySizeChoosenHolder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Battery-Volt-Holder-start */
+.batteryVoltHolder {
+  grid-area: battery-volt-holder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.batteryVoltHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.batteryVoltHolder label {
+  position: absolute;
+  left: 12rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.batteryVoltHolder input:focus ~ label,
+.batteryVoltHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-color);
+}
+/* Battery-Volt-Holder-end */
+
+/* Days-Of-Autonomy-Holder-start */
+.daysOfAutonomyHolder {
+  grid-area: daysOfAutonomyHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.daysOfAutonomyHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.daysOfAutonomyHolder label {
+  position: absolute;
+  left: 12rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.daysOfAutonomyHolder input:focus ~ label,
+.daysOfAutonomyHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-color);
+}
+/* Days-Of-Autonomy-Holder-end */
+
+/* Dept-Of-Discharge-Holder-start */
+.deptOfDischargeHolder {
+  grid-area: deptOfDischargeHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.deptOfDischargeHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.deptOfDischargeHolder label {
+  position: absolute;
+  left: 12rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.deptOfDischargeHolder input:focus ~ label,
+.deptOfDischargeHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-color);
+}
+/* Dept-Of-Discharge-Holder-end */
+
+/* Marginal-Safety-Holder-start */
+.marginalSafetyHolder {
+  grid-area: marginalSafetyHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.marginalSafetyHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.marginalSafetyHolder label {
+  position: absolute;
+  left: 12rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.marginalSafetyHolder input:focus ~ label,
+.marginalSafetyHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-color);
+}
+/* Marginal-Safety-Holder-end */
+
+/* Battery-Efficiency-Holder-start */
+.batteryEfficiencyHolder {
+  grid-area: batteryEfficiencyHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.batteryEfficiencyHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.batteryEfficiencyHolder label {
+  position: absolute;
+  left: 12rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.batteryEfficiencyHolder input:focus ~ label,
+.batteryEfficiencyHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-color);
+}
+/* Battery-Efficiency-Holder-end */
+
+/* Battery-Size-Choosen-Holder-start */
+.batterySizeChoosenHolder {
+  grid-area: batterySizeChoosenHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  position: relative;
+}
+
+.batterySizeChoosenHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.batterySizeChoosenHolder label {
+  position: absolute;
+  left: 11.5rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.batterySizeChoosenHolder input:focus ~ label,
+.batterySizeChoosenHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-color);
+}
+/* Battery-Size-Choosen-Holder-end */
+
+/* Submit-All-Proceed-start */
+.proceedBtn {
+  border: none;
+  background-color: var(--submit-to-proceed-background);
+  box-shadow: var(--submit-to-proceed-box-shadow);
+  border-radius: 0.5rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  cursor: pointer;
+  color: var(--submit-to-proceed-font-color);
+}
+.proceedBtn:hover {
+  background-color: var(--submit-hover-background-color);
+  color: var(--submit-hover-font-color);
+  transition: 2s;
+}
+/* Submit-All-Proceed-end */
+/* Right-child-container ends here */
+/* Main ends here */

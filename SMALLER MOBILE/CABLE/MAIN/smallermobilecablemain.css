@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main start here */
+main {
+  grid-area: main;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-columns: auto;
+  padding: 2rem;
+}
+
+/* main-wrapper-container start here */
+.main-wrapper-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  min-height: 10vh;
+  background-color: var(--main-wrapper-background-color);
+  border-radius: 1rem;
+  grid-template-areas:
+    "right-child-container"
+    "left-child-container";
+  gap: 2rem;
+}
+/* main-wrapper-container ends here */
+
+/* left-child-container start here */
+.left-child-container {
+  grid-area: left-child-container;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "total-panel-for-actual-battery-holder"
+    "total-panel-for-adjusted-battery-holder"
+    "length-of-cable-for-actual-battery-holder"
+    "length-of-cable-for-adjusted-battery-holder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Left-container-children stsrt */
+/* Total-Panel-For-Actual-Battery-Start */
+.left-child-container .total-panel-for-actual-battery-holder {
+  grid-area: total-panel-for-actual-battery-holder;
+  display: grid;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--solar-cable-output-field-box-shadow);
+  position: relative;
+}
+.total-panel-for-actual-battery-holder .total-panel-for-actual-battery-title {
+  position: absolute;
+  left: 19rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--solar-cable-output-font-color);
+  font-weight: bold;
+}
+.totalPanelForActualBatteryValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--solar-cable-output-font-color);
+}
+/* Total-Panel-For-Actual-Battery-End */
+
+/* Total-Panel-For-Adjusted-Battery-Start */
+.left-child-container .total-panel-for-adjusted-battery-holder {
+  grid-area: total-panel-for-adjusted-battery-holder;
+  display: grid;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--solar-cable-output-field-box-shadow);
+  position: relative;
+}
+.total-panel-for-adjusted-battery-holder
+  .total-panel-for-adjusted-battery-title {
+  position: absolute;
+  left: 18rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--solar-cable-output-font-color);
+  font-weight: bold;
+}
+.totalPanelForAdjustedBatteryValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--solar-cable-output-font-color);
+}
+/* Total-Panel-For-Adjusted-Battery-End */
+
+/* Length-Of-Cable-for-Actual-Battery-Start */
+.left-child-container .length-of-cable-for-actual-battery-holder {
+  grid-area: length-of-cable-for-actual-battery-holder;
+  display: grid;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--solar-cable-output-field-box-shadow);
+  position: relative;
+}
+.length-of-cable-for-actual-battery-holder
+  .length-of-cable-for-actual-battery-title {
+  position: absolute;
+  left: 18rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--solar-cable-output-font-color);
+  font-weight: bold;
+}
+.lengthOfCableForActualValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--solar-cable-output-font-color);
+}
+/* Length-Of-Cable-for-Actual-Battery-End */
+
+/* Length-Of-Cable-for-Adjusted-Battery-Start */
+.left-child-container .length-of-cable-for-adjusted-battery-holder {
+  grid-area: length-of-cable-for-adjusted-battery-holder;
+  display: grid;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--solar-cable-output-field-box-shadow);
+  position: relative;
+}
+.length-of-cable-for-adjusted-battery-holder
+  .length-of-cable-for-adjusted-battery-title {
+  position: absolute;
+  left: 17rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--solar-cable-output-font-color);
+  font-weight: bold;
+}
+.lengthOfCableForAdjustedValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--solar-cable-output-font-color);
+}
+/* Length-Of-Cable-for-Actual-Battery-End */
+/* Left-container-children end */
+/* left-child-container ends here */
+
+/* Right-child-container start here */
+.right-child-container {
+  grid-area: right-child-container;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "panelWidthHolder"
+    "panelColumnGapHolder"
+    "panelRowGapHolder"
+    "panelRowHolder"
+    "gapBtwnPanelAndChargeControlHolder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Panel-Width-Start */
+.panelWidthHolder {
+  grid-area: panelWidthHolder;
+  border: var(--solar-cable-input-field-border);
+  border-radius: 0.4rem;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.panelWidthHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+.panelWidthHolder label {
+  position: absolute;
+  left: 23rem;
+  top: 4.3rem;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+
+.panelWidthHolder input:focus ~ label,
+.panelWidthHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--solar-cable-label-transition-font-color);
+  font-weight: bold;
+}
+/* Panel-Width-End */
+
+/* Panel-Column-Gap-Start */
+.panelColumnGapHolder {
+  grid-area: panelColumnGapHolder;
+  border: var(--solar-cable-input-field-border);
+  border-radius: 0.4rem;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.panelColumnGapHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+.panelColumnGapHolder label {
+  position: absolute;
+  left: 22rem;
+  top: 4.3rem;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+
+.panelColumnGapHolder input:focus ~ label,
+.panelColumnGapHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--solar-cable-label-transition-font-color);
+  font-weight: bold;
+}
+/* Panel-Column-Gap-End */
+
+/* Panel-Row-Gap-Start */
+.panelRowGapHolder {
+  grid-area: panelRowGapHolder;
+  border: var(--solar-cable-input-field-border);
+  border-radius: 0.4rem;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.panelRowGapHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+.panelRowGapHolder label {
+  position: absolute;
+  left: 22rem;
+  top: 4.3rem;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+
+.panelRowGapHolder input:focus ~ label,
+.panelRowGapHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--solar-cable-label-transition-font-color);
+  font-weight: bold;
+}
+/* Panel-Row-Gap-End */
+
+/* Panel-Row-Start */
+.panelRowHolder {
+  grid-area: panelRowHolder;
+  border: var(--solar-cable-input-field-border);
+  border-radius: 0.4rem;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.panelRowHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+.panelRowHolder label {
+  position: absolute;
+  left: 23rem;
+  top: 4.3rem;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+
+.panelRowHolder input:focus ~ label,
+.panelRowHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--solar-cable-label-transition-font-color);
+  font-weight: bold;
+}
+/* Panel-Row-End */
+
+/* Gap-Btw-Panel-&-Charge-Control-Start */
+.gapBtwnPanelAndChargeControlHolder {
+  grid-area: gapBtwnPanelAndChargeControlHolder;
+  border: var(--solar-cable-input-field-border);
+  border-radius: 0.4rem;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.gapBtwnPanelAndChargeControlHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+.gapBtwnPanelAndChargeControlHolder label {
+  position: absolute;
+  left: 17rem;
+  top: 4.3rem;
+  color: var(--solar-cable-input-field-font-color);
+  font-weight: bold;
+}
+
+.gapBtwnPanelAndChargeControlHolder input:focus ~ label,
+.gapBtwnPanelAndChargeControlHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--solar-cable-label-transition-font-color);
+  font-weight: bold;
+}
+/* Gap-Btw-Panel-&-Charge-Control-End */
+
+/* Submit-All-Proceed-start */
+.proceedBtn {
+  border: none;
+  background-color: var(--submit-to-proceed-background);
+  box-shadow: var(--solar-cable-submit-to-proceed-box-shadow);
+  border-radius: 0.5rem;
+  min-height: 10rem;
+  /* max-height: 5rem; */
+  cursor: pointer;
+  color: var(inverter-submit-to-proceed-font-color);
+  /* font-weight: bold; */
+}
+.proceedBtn:hover {
+  background-color: var(--solar-cable-submit-hover-background-color);
+  color: var(--solar-cable-submit-to-proceed-hover-color);
+  transition: 2s;
+  box-shadow: var(--solar-cable-submit-to-proceed-hover-box-shadow);
+  font-weight: bold;
+}
+/* Submit-All-Proceed-end */
+/* Right-child-container ends here */
+/* Main ends here */
