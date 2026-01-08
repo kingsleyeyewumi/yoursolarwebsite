@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nav start here */
+.loadNav {
+  grid-area: nav;
+  background-color: var(--mibile-load-audit-nav-background);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "leftArrowHolder loadAuditHeaderHolder loadAuditHeaderHolder loadAuditHeaderHolder loadAuditHeaderHolder loadAuditHeaderHolder loadAuditHeaderHolder loadAuditHeaderHolder rightArrowHolder rightArrowHolder";
+  min-height: 3rem;
+}
+
+/* Left Arrow start here */
+nav .leftArrowHolder {
+  grid-area: leftArrowHolder;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+nav .leftArrowHolder a {
+  color: var(--nav-right-left-arrow-color);
+  text-decoration: none;
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 50%;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+nav .leftArrowHolder a:hover {
+  background-color: var(--nav-left-right-hover-background);
+  color: var(--nav-left-right-hover-color);
+  transition: 2s;
+}
+/* Left Arrow ends here */
+
+/* Load Audit Header start */
+nav .loadAuditHeaderHolder {
+  grid-area: loadAuditHeaderHolder;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: var(--mobile-nav-header-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: rgba(255, 255, 255, 0.9); */
+  font-weight: bold;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(12, 117, 187, 0.8);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+nav .loadAuditHeaderHolder h3 {
+  background-image: url(../../IMAGES/56465[1].jpg);
+  background-position: bottom;
+  background-clip: text;
+  color: transparent;
+}
+/* Load Audit Header end */
+
+/* Right Arrow start */
+nav .rightArrowHolder {
+  grid-area: rightArrowHolder;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+}
+
+nav .rightArrowHolder a {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  text-decoration: none;
+  gap: 0.5rem;
+  color: var(--nav-right-left-arrow-color);
+}
+
+nav .rightArrowHolder a:hover {
+  background-color: var(--nav-left-right-hover-background);
+  color: var(--nav-left-right-hover-color);
+  transition: 2s;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+/* Right Arrow end */
+/* Nav ends here */

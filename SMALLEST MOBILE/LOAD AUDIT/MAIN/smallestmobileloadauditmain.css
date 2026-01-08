@@ -1,0 +1,720 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main start here */
+main {
+  grid-area: main;
+  background-color: var(--mainBody-background-color);
+  padding: 0.5rem;
+}
+/* Main ends here */
+
+/* Total Watt Hour Main Container start here */
+main .totalWHContainer {
+  min-height: 1rem;
+  background-color: rgba(255, 255, 255, 95%);
+  border-radius: 0.4rem;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "totalPowerStringHolder totalPowerStringHolder totalPowerArrowHolder totalPowerNumberHolder"
+    "totalWHStringHolder totalWHStringHolder totalWHArrowHolder  totalWHNumberHolder";
+}
+/* Total Power String Holdeer start */
+main .totalWHContainer .totalPowerStringHolder {
+  grid-area: totalPowerStringHolder;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 0.5rem;
+  padding-left: 2rem;
+}
+
+main .totalWHContainer .totalPowerStringHolder p {
+  color: rgba(12, 117, 187, 0.8);
+  font-weight: bold;
+  /* font-size: 1.2rem; */
+}
+/* Total Power String Holdeer end */
+
+/* Total Power Arrow Holder start */
+main .totalWHContainer .totalPowerArrowHolder {
+  grid-area: totalPowerArrowHolder;
+  /* border: 2px solid blue; */
+  display: flex;
+  position: relative;
+}
+
+/*Total Power 3 Triangle Start */
+main .totalWHContainer .totalPowerArrowHolder .TPARW {
+  min-height: 0.5rem;
+  min-width: 0.25rem;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid rgba(10, 231, 10, 0.7);
+  animation: arrows;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.TPRW {
+  padding: 0.3rem;
+}
+/*Total Power 3 Triangle end */
+
+/* Total Power Number Holder start */
+main .totalWHContainer .totalPowerNumberHolder {
+  grid-area: totalPowerNumberHolder;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+/* Total Power Number Holder end */
+
+/* Total WH Strings Holder start */
+main .totalWHContainer .totalWHStringHolder {
+  grid-area: totalWHStringHolder;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 0.5rem;
+  padding-left: 2rem;
+}
+
+main .totalWHContainer .totalWHStringHolder p {
+  color: rgba(12, 117, 187, 0.8);
+  font-weight: bold;
+}
+/* Total WH Strings Holder end */
+
+/* Total WH Arrow Holder start */
+main .totalWHContainer .totalWHArrowHolder {
+  grid-area: totalWHArrowHolder;
+  /* border: 2px solid blue; */
+  display: flex;
+  position: relative;
+}
+
+/* 3 Triangle Start */
+main .totalWHContainer .ARW {
+  min-height: 0.5rem;
+  min-width: 0.25rem;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid rgba(10, 231, 10, 0.7);
+  animation: arrows;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes arrows {
+  98% {
+    transform: translateX(800%);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+  20% {
+    border-left: 10px solid rgba(246, 246, 41, 0.7);
+  }
+  70% {
+    border-left: 10px solid rgba(10, 231, 10, 0.7);
+  }
+}
+/* 3 Triangle End */
+/* Total WH Arrow Holder end */
+
+/* Total WH Number Holder start */
+main .totalWHContainer .totalWHNumberHolder {
+  grid-area: totalWHNumberHolder;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+
+.TWHR {
+  padding: 0.3rem;
+}
+/* Total WH Number Holder end */
+
+/* Surge Total Balance Contianer Start */
+.surgeTotalBanceContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 50%;
+  min-height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 9rem;
+  border-radius: 0.3rem;
+  grid-template-areas: "surgeTitleHolder surgeTitleHolder surgeNumberHolder";
+}
+
+.surgeTotalBanceContainer .surgeTitleHolder {
+  grid-area: surgeTitleHolder;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.44rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: rgba(12, 117, 187, 0.8);
+  font-weight: bold;
+}
+
+.surgeTotalBanceContainer .surgeNumberHolder {
+  grid-area: surgeNumberHolder;
+  background-color: rgba(12, 117, 187, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-weight: bold;
+}
+/* Surge Total Balance Contianer End */
+
+/* Load Eventries Container start */
+main .loadEventriesContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-height: 20rem;
+  /* border: 2px solid red; */
+  margin-top: 4rem;
+  overflow-y: auto;
+  gap: 1rem;
+  padding: 2%;
+}
+
+/* Dynamic Div created "loadInventriesHolder" start */
+.loadEventriesContainer .loadInventriesHolder {
+  min-height: 25rem;
+  max-width: 100%;
+  /* border: 0.125rem solid red; */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  grid-template-areas:
+    "description"
+    "qty"
+    "powerW"
+    "surgeW"
+    "runTime"
+    "surgeBalanceW"
+    "totalPowerW"
+    "totalEnergyConsumption";
+  position: relative;
+}
+
+/* Description start */
+.loadInventriesHolder .description {
+  grid-area: description;
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+}
+
+.description .descriptionInput {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.description .descriptionLabel {
+  position: absolute;
+  left: 10rem;
+  top: 1rem;
+  /* transform: translateY(60%); */
+  color: rgba(3, 59, 102, 0.9);
+  pointer-events: none;
+  transition: 1s;
+}
+
+.description .descriptionInput:focus ~ .descriptionLabel,
+.description .descriptionInput:not(:placeholder-shown) ~ .descriptionLabel {
+  top: 0;
+  font-size: 0.8rem;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+/* Description end */
+
+/* QTY start */
+.loadInventriesHolder .qty {
+  grid-area: qty;
+  /* border: 0.125rem solid red; */
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+}
+
+.qty .qtyInput {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.qty .qtyLabel {
+  position: absolute;
+  left: 10rem;
+  top: 1rem;
+  color: rgba(3, 59, 102, 0.9);
+  /* transform: translateY(60%); */
+  pointer-events: none;
+  transition: 1s;
+}
+
+.qty .qtyInput:focus ~ .qtyLabel,
+.qty .qtyInput:not(:placeholder-shown) ~ .qtyLabel {
+  top: 0;
+  font-size: 0.8rem;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+/* QTY end */
+
+/* Power(W) start */
+.loadInventriesHolder .powerW {
+  grid-area: powerW;
+  /* border: 0.125rem solid black; */
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+}
+
+.powerW .powerWInput {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  outline: none;
+  border: none;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.powerW .powerWLabel {
+  position: absolute;
+  left: 10rem;
+  top: 1rem;
+  color: rgba(3, 59, 102, 0.9);
+  /* transform: translateY(60%); */
+  pointer-events: none;
+  transition: 1s;
+}
+
+.powerW .powerWInput:focus ~ .powerWLabel,
+.powerW .powerWInput:not(:placeholder-shown) ~ .powerWLabel {
+  top: 0;
+  font-size: 0.8rem;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+/* Power(W) end */
+
+/* Surge Start */
+.loadInventriesHolder .surgeW {
+  grid-area: surgeW;
+  /* border: 0.125rem solid black; */
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+}
+
+.surgeW .surgeWInput {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  outline: none;
+  border: none;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.surgeW .surgeWLabel {
+  position: absolute;
+  left: 10rem;
+  top: 1rem;
+  color: rgba(3, 59, 102, 0.9);
+  /* transform: translateY(60%); */
+  pointer-events: none;
+  transition: 1s;
+}
+
+.surgeW .surgeWInput:focus ~ .surgeWLabel,
+.surgeW .surgeWInput:not(:placeholder-shown) ~ .surgeWLabel {
+  top: 0;
+  font-size: 0.8rem;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+/* Surge End */
+
+/* Surge Balance Start */
+.loadInventriesHolder .surgeBalanceW {
+  grid-area: surgeBalanceW;
+  /* border: 0.125rem solid gold; */
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+}
+
+.surgeBalanceW .surgeBalanceValue {
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+  color: var(--total-WH-totalPower-W-color);
+  font-size: 1.5rem;
+  background-color: var(--total-WH-totalPower-W-background);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.surgeBalanceW .surgeBalanceWTitle {
+  position: absolute;
+  left: 17rem;
+  top: -0.1rem;
+  font-size: 0.8rem;
+  /* color: var(--total-WH-totalPower-W-color); */
+  font-weight: bold;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.15rem;
+}
+/* Surge Balance End */
+
+/* TotalPower(W) start */
+.loadInventriesHolder .totalPowerW {
+  grid-area: totalPowerW;
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+  color: var(--total-WH-totalPower-W-color);
+  font-size: 1rem;
+  background-color: var(--total-WH-totalPower-W-background);
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.totalPowerW .totalPowerWValue {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: var(--total-WH-totalPower-W-color);
+  font-size: 1.5rem;
+  background-color: var(--total-WH-totalPower-W-background);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.totalPowerW .totalPowerWLabel {
+  position: absolute;
+  left: 17rem;
+  top: -0.1rem;
+  font-size: 0.8rem;
+  /* color: var(--total-WH-totalPower-W-color); */
+  font-weight: bold;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.15rem;
+}
+/* TotalPower(W) end */
+
+/* Run Time(HRS) start */
+.loadInventriesHolder .runTime {
+  grid-area: runTime;
+  /* border: 0.125rem solid red; */
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  position: relative;
+}
+
+.runTime .runTimeInput {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  outline: none;
+  border: none;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.runTime .runTimeLabel {
+  position: absolute;
+  left: 10rem;
+  top: 1rem;
+  color: rgba(3, 59, 102, 0.9);
+  /* transform: translateY(60%); */
+  pointer-events: none;
+  transition: 1s;
+}
+
+.runTime .runTimeInput:focus ~ .runTimeLabel,
+.runTime .runTimeInput:not(:placeholder-shown) ~ .runTimeLabel {
+  top: 0;
+  font-size: 0.8rem;
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+}
+/* Run Time(HRS) end */
+
+/* Total Energy Consumption(WH) start */
+.loadInventriesHolder .totalEnergyConsumption {
+  grid-area: totalEnergyConsumption;
+  position: relative;
+  color: var(--total-WH-totalPower-W-color);
+  font-size: 1rem;
+  background-color: var(--total-WH-totalPower-W-background);
+  border-bottom: 0.0625rem solid rgba(12, 117, 187, 0.8);
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.totalEnergyConsumption .totalEnergyConsumptionValue {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: var(--total-WH-totalPower-W-color);
+  font-size: 1.5rem;
+  background-color: var(--total-WH-totalPower-W-background);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.totalEnergyConsumption .totalEnergyConsumptionLabel {
+  position: absolute;
+  left: 17rem;
+  top: -0.1rem;
+  font-size: 0.8rem;
+  /* color: var(--total-WH-totalPower-W-color); */
+  font-weight: bold;
+  color: rgba(3, 59, 102, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.15rem;
+}
+/* Total Energy Consumption(WH) end */
+
+/* Close Row Btn start */
+.loadInventriesHolder .closeRowBtn {
+  position: absolute;
+  border: none;
+  margin-left: 0.2rem;
+  font-size: 0.9rem;
+  color: rgba(12, 117, 187, 0.9);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.loadInventriesHolder .closeRowBtn:hover {
+  color: rgba(244, 8, 8, 0.9);
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 1s;
+}
+/* Close Row Btn end */
+
+/* Successful & Unsuccessful Submit Tag start */
+.loadEventriesContainer .successful {
+  min-width: 10rem;
+  min-height: 3.5rem;
+  background-color: var(--successful-submit-tag-background);
+  color: var(--successful-submit-tag-color);
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+  z-index: 5;
+  justify-self: center;
+  align-self: center;
+}
+.loadEventriesContainer .hideSuccessfulDiv {
+  display: none;
+}
+
+.loadEventriesContainer .unsuccessful {
+  min-width: 10rem;
+  min-height: 3.5rem;
+  background-color: var(--unsuccessful-submit-tag-background);
+  color: var(--unsuccessful-submit-tag-color);
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+  z-index: 5;
+  justify-self: center;
+  align-self: center;
+}
+.loadEventriesContainer .hideUnsuccessful {
+  display: none;
+}
+/* Successful & Unsuccessful Submit Tag end */
+/* Dynamic Div created "loadInventriesHolder" end */
+/* Load Eventries Container end */
+
+/* Load more fields & Get Totat WH Buttons Container start */
+main .loadMoreFieldsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "loadMoreButtonHolder getTotalWHHolder getOutputHolder";
+  min-height: 3.5rem;
+  /* border: 2px solid red; */
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+/* Buttons start here */
+/* Load More Fields start */
+main .loadMoreFieldsContainer .loadMoreButtonHolder {
+  grid-area: loadMoreButtonHolder;
+  display: flex;
+  justify-content: center;
+}
+
+main .loadMoreFieldsContainer .loadMoreButtonHolder .LoadMore {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  min-width: 100%;
+  background-color: var(--button-background-color);
+  cursor: pointer;
+  color: var(--button-font-color);
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: var(--button-box-shadow);
+}
+main .loadMoreFieldsContainer .loadMoreButtonHolder .LoadMore:hover {
+  background-color: rgba(244, 8, 8, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  transition: 2s;
+}
+/* Load More Fields end */
+
+/* Get Total WH Button start */
+main .loadMoreFieldsContainer .getTotalWHHolder {
+  grid-area: getTotalWHHolder;
+  display: flex;
+  justify-content: center;
+}
+
+main .loadMoreFieldsContainer .getTotalWHHolder .getTotalWH {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  min-width: 100%;
+  background-color: var(--button-background-color);
+  cursor: pointer;
+  color: var(--button-font-color);
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: var(--button-box-shadow);
+}
+
+main .loadMoreFieldsContainer .getTotalWHHolder .getTotalWH:hover {
+  background-color: rgba(244, 8, 8, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  transition: 2s;
+}
+
+main .loadMoreFieldsContainer .getTotalWHHolder .getTotalHide {
+  display: none;
+}
+/* Get Total WH Button end */
+
+/* Get Output Result start */
+main .loadMoreFieldsContainer .result {
+  grid-area: getOutputHolder;
+  display: flex;
+  justify-content: center;
+}
+
+main .loadMoreFieldsContainer .result {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: var(--button-background-color);
+  cursor: pointer;
+  color: var(--button-font-color);
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: var(--button-box-shadow);
+}
+
+main .loadMoreFieldsContainer .result:hover {
+  background-color: rgba(244, 8, 8, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  transition: 2s;
+}
+
+main .loadMoreFieldsContainer .hideResult {
+  display: none;
+}
+/* Get Output Result end */
+/* Buttons end here */
+/* Load more fields & Get Totat WH Buttons Container end */
+/* Total Watt Hour Main Container ends here */
