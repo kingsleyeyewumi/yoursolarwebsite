@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Logo start here */
+.logoContainer {
+  grid-area: logoContainer;
+  /* border: 2px solid blue; */
+}
+/* Logo ends here */

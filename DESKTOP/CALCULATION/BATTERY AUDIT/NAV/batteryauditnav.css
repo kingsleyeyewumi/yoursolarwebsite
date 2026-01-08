@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nav start here */
+nav {
+  grid-area: nav;
+  background-color: var(--nav-background-color);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "left-arrow-container header-font-container header-font-container header-font-container header-font-container header-font-container header-font-container header-font-container header-font-container right-arrow-container";
+  position: sticky;
+  top: 0rem;
+  z-index: 10;
+}
+
+/* Left Arrow Container start here */
+nav .left-arrow-container {
+  grid-area: left-arrow-container;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+nav .left-arrow-container a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+nav .left-arrow-container a:hover {
+  background-color: var(--nav-header-font-background-color);
+  padding: 0.2rem;
+  border-radius: 50%;
+  transition: 2s;
+}
+/* Left Arrow Container ends here */
+
+/* Hearder Font Container start */
+nav .header-font-container {
+  grid-area: header-font-container;
+  /* border: 2px solid red; */
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: var(--nav-header-font-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+nav .header-font-container h1 {
+  background-image: url(../IMAGES/kingphoto.jpg);
+  background-position: bottom;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+/* Hearder Font Container end */
+
+/* Right Arrow Container start here */
+nav .right-arrow-container {
+  grid-area: right-arrow-container;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+nav .right-arrow-container a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+nav .right-arrow-container a:hover {
+  background-color: var(--nav-header-font-background-color);
+  padding: 0.2rem;
+  border-radius: 50%;
+  transition: 2s;
+}
+/* Right Arrow Container ends here */
+/* Nav ends here */

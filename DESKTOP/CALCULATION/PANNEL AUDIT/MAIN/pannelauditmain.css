@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main start here */
+main {
+  grid-area: main;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-columns: auto;
+  padding: 2rem;
+}
+
+/* main-wrapper-container start here */
+.main-wrapper-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 10vh;
+  background-color: var(--main-wrapper-background-color);
+  border-radius: 1rem;
+  grid-template-areas: "left-child-container right-child-container";
+}
+/* main-wrapper-container ends here */
+
+/* left-child-container start here */
+.left-child-container {
+  grid-area: left-child-container;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    "actual-battery-capacity-AH-battery-audit"
+    "adjusted-battery-capacity-battery-audit"
+    "size-of-panel-required-battery-audit-holder"
+    "size-of-panel-required-for-adjusted-holder"
+    "no-of-panel-required-battery-audit-holder"
+    "no-of-panel-required-for-adjusted-battery-holder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Left-container-children stsrt */
+/* actual-battery-capacity-AH-battery-audit start */
+.left-child-container .actual-battery-capacity-AH-battery-audit {
+  grid-area: actual-battery-capacity-AH-battery-audit;
+  display: grid;
+  min-height: 5rem;
+  max-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--panel-output-field-box-shadow);
+  position: relative;
+}
+.actual-battery-capacity-AH-battery-audit .actual-battery-capacity-AH-title {
+  position: absolute;
+  left: 6rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--output-field-title-color);
+  font-weight: bold;
+}
+.actualBatteryCapAHValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--output-field-font-color);
+}
+/* actual-battery-capacity-AH-battery-audit end */
+
+/* adjusted-battery-capacity-battery-audit-start */
+.left-child-container .adjusted-battery-capacity-battery-audit {
+  grid-area: adjusted-battery-capacity-battery-audit;
+  display: grid;
+  min-height: 5rem;
+  max-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--panel-output-field-box-shadow);
+  position: relative;
+}
+.adjusted-battery-capacity-battery-audit .adjusted-battery-title {
+  position: absolute;
+  left: 8rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--output-field-title-color);
+  font-weight: bold;
+}
+.adjustedBatteryCapacityValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--output-field-font-color);
+}
+/* adjusted-battery-capacity-battery-audit-end */
+
+/* Size-Of-Solar-Panel-Required-From-Battery-Audit-holder-start */
+.left-child-container .size-of-panel-required-battery-audit-holder {
+  grid-area: size-of-panel-required-battery-audit-holder;
+  display: grid;
+  min-height: 5rem;
+  max-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--panel-output-field-box-shadow);
+  position: relative;
+}
+.size-of-panel-required-battery-audit-holder .size-of-panel-battery-title {
+  position: absolute;
+  left: 5rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--output-field-title-color);
+  font-weight: bold;
+}
+.sizeOfPanelRequiredBatteryAuditValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--output-field-font-color);
+}
+/* Size-Of-Solar-Panel-Required-From-Battery-Audit-holder-end */
+
+/* Size-Of-Solar-Panel-Required-Adjusted-Battery-holder-start */
+.left-child-container .size-of-panel-required-for-adjusted-holder {
+  grid-area: size-of-panel-required-for-adjusted-holder;
+  display: grid;
+  min-height: 5rem;
+  max-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--panel-output-field-box-shadow);
+  position: relative;
+}
+.size-of-panel-required-for-adjusted-holder
+  .size-of-panel-required-for-adjusted-title {
+  position: absolute;
+  left: 5rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--output-field-title-color);
+  font-weight: bold;
+}
+.sizeOfPanelRequiredForAdjustedValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--output-field-font-color);
+}
+/* Size-Of-Solar-Panel-Required-Adjusted-Battery-holder-end */
+
+/* No-Of-Solar-Panel-Required-From-Battery-Audit-holder-start */
+.left-child-container .no-of-panel-required-battery-audit-holder {
+  grid-area: no-of-panel-required-battery-audit-holder;
+  display: grid;
+  min-height: 5rem;
+  max-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--panel-output-field-box-shadow);
+  position: relative;
+}
+.no-of-panel-required-battery-audit-holder .no-of-panel-required-battery-title {
+  position: absolute;
+  left: 6.5rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--output-field-title-color);
+  font-weight: bold;
+}
+.noOfPanelRequiredBatteryValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--output-field-font-color);
+}
+/* No-Of-Solar-Panel-Required-From-Battery-Audit-holder-end */
+
+/* No-Of-Solar-Panel-Required-For-Adjusted-Battery-holder-start */
+.left-child-container .no-of-panel-required-for-adjusted-battery-holder {
+  grid-area: no-of-panel-required-for-adjusted-battery-holder;
+  display: grid;
+  min-height: 5rem;
+  max-height: 5rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--panel-output-field-box-shadow);
+  position: relative;
+}
+.no-of-panel-required-for-adjusted-battery-holder
+  .no-of-panel-required-for-adjusted-battery-title {
+  position: absolute;
+  left: 6rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--output-field-title-color);
+  font-weight: bold;
+}
+.noOfPanelRequiredForAdjustedBatteryValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--output-field-font-color);
+}
+/* No-Of-Solar-Panel-Required-For-Adjusted-Battery-holder-end */
+
+/* Left-container-children end */
+/* left-child-container ends here */
+
+/* Right-child-container start here */
+.right-child-container {
+  grid-area: right-child-container;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "performanceRatioHolder"
+    "peakSunHourHolder"
+    "powerRatingHolder"
+    "marginalSafetyHolder"
+    "panelSizeChoosenHolder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Performance-Ratio-Holder-start */
+.performanceRatioHolder {
+  grid-area: performanceRatioHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.performanceRatioHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.performanceRatioHolder label {
+  position: absolute;
+  left: 14rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.performanceRatioHolder input:focus ~ label,
+.performanceRatioHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-font-color);
+}
+/* Performance-Ratio-Holder-end */
+
+/* Peak-Sun-Hour-Holder-start */
+.peakSunHourHolder {
+  grid-area: peakSunHourHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.peakSunHourHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.peakSunHourHolder label {
+  position: absolute;
+  left: 14rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.peakSunHourHolder input:focus ~ label,
+.peakSunHourHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-font-color);
+}
+/* Peak-Sun-Hour-Holder-end */
+
+/* Power-Rating-Of-Solar-Panel-Holder-start */
+.powerRatingHolder {
+  grid-area: powerRatingHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.powerRatingHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.powerRatingHolder label {
+  position: absolute;
+  left: 12rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.powerRatingHolder input:focus ~ label,
+.powerRatingHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-font-color);
+}
+/* Power-Rating-Of-Solar-Panel-Holder-end */
+
+/* Marginal-Safety-Holder-start */
+.marginalSafetyHolder {
+  grid-area: marginalSafetyHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.marginalSafetyHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.marginalSafetyHolder label {
+  position: absolute;
+  left: 16rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.marginalSafetyHolder input:focus ~ label,
+.marginalSafetyHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-font-color);
+}
+/* Marginal-Safety-Holder-end */
+
+/* Panel-Size-Choosen-Holder-start */
+.panelSizeChoosenHolder {
+  grid-area: panelSizeChoosenHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.panelSizeChoosenHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.panelSizeChoosenHolder label {
+  position: absolute;
+  left: 16rem;
+  top: 1.9rem;
+  color: var(--input-field-font-color);
+}
+
+.panelSizeChoosenHolder input:focus ~ label,
+.panelSizeChoosenHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--label-transition-font-color);
+}
+/* Panel-Size-Choosen-Holder-end */
+
+/* Submit-All-Proceed-start */
+.proceedBtn {
+  border: none;
+  background-color: var(--submit-to-proceed-background);
+  box-shadow: var(--panel-submit-to-proceed-box-shadow);
+  border-radius: 0.5rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  cursor: pointer;
+  color: var(--submit-to-proceed-font-color);
+}
+.proceedBtn:hover {
+  background-color: var(--panel-submit-hover-background-color);
+  color: var(--submit-hover-font-color);
+  transition: 2s;
+  box-shadow: var(--panel-submit-to-proceed-hover-box-shadow);
+}
+/* Submit-All-Proceed-end */
+/* Right-child-container ends here */
+/* Main ends here */

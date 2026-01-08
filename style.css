@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frontPage {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 3rem auto auto;
+  background-color: var(--mainBody-background-color);
+  min-height: 100vh;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+}

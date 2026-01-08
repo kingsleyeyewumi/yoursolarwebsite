@@ -1,0 +1,43 @@
+body {
+  scroll-behavior: smooth;
+}
+
+/* About start */
+.about {
+  grid-area: about;
+  /* border: 2px solid red; */
+  min-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about a {
+  /* border: 2px solid red; */
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: rgb(223, 223, 247);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.active {
+  /* color: var(--nav-menu-active-color); */
+  background-color: var(--nav-menu-active-background-color);
+  padding: 0.4rem;
+}
+a.active p {
+  color: var(--nav-menu-active-color);
+}
+
+h1::first-letter {
+  font-size: 5rem;
+  color: rgba(8, 81, 105, 0.8);
+}
+h1 {
+  color: rgba(238, 157, 8, 0.8);
+}
+span {
+  color: rgba(8, 81, 105, 0.8);
+}
+/* About end */

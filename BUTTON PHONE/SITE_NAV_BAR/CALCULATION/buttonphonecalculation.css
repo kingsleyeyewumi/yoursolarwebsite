@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Calculation start */
+.calcBtn {
+  grid-area: calcBtn;
+  /* border: 2px solid red; */
+  min-height: 1rem;
+  background-color: var(--calculation-Btn-background);
+  border: none;
+}
+.calcBtn p {
+  /* border: 2px solid red; */
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: var(--calculation-Btn-p-element-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.calcBtn p:hover {
+  color: var(--calculation-hover-color);
+  background: var(--calculation-hover-background);
+  transition: 1s;
+}
+
+.calcItemsContainer {
+  display: grid;
+  grid-area: auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  position: absolute;
+  min-width: 25rem;
+  min-height: 5rem;
+  background-color: var(--calculation-items-container-background);
+  border-radius: 0.3rem;
+  text-align: center;
+  line-height: 3rem;
+  padding: 0.5rem;
+  top: 15rem;
+  right: 15rem;
+  animation: calc;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes calc {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    transform: translateX(100%);
+  }
+}
+
+.calcItemsContainer a {
+  text-decoration: none;
+}
+.calcItemsContainer a p {
+  color: var(--calcItemsContainer-p-element-color);
+  animation: calc;
+  animation-duration: 2s;
+}
+.calcItemsContainer a p:hover {
+  background-color: var(--calcItemsContainer-p-element-hover-background);
+  color: var(--calcItemsContainer-p-element-hover-color);
+  font-style: italic;
+  transition: 2s;
+}
+.calcItemsHide {
+  display: none;
+}
+
+.closeCalcItemsContainer {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  color: var(--close-calcItemsContainer-button-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: closeBtn;
+  animation-duration: 3s;
+  background-color: transparent;
+  border: none;
+}
+@keyframes closeBtn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    transform: scale(0.5, 1);
+  }
+}
+.closeCalcItemsContainer:hover {
+  color: var(--close-calcItemsContainer-button-hover-color);
+}
+/* Calculation end */

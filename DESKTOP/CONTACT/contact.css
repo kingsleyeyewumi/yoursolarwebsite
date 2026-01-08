@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contact start */
+.contact {
+  grid-area: contact;
+  /* border: 2px solid red; */
+  min-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact a {
+  /* border: 2px solid red; */
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: rgb(223, 223, 247);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Contact end */

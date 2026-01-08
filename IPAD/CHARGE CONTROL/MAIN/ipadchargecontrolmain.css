@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main start here */
+main {
+  grid-area: main;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-columns: auto;
+  padding: 2rem;
+}
+
+/* main-wrapper-container start here */
+.main-wrapper-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 10vh;
+  background-color: var(--main-wrapper-background-color);
+  border-radius: 1rem;
+  grid-template-areas: "left-child-container right-child-container";
+}
+/* main-wrapper-container ends here */
+
+/* left-child-container start here */
+.left-child-container {
+  grid-area: left-child-container;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "over-all-actual-panel-watt-holder"
+    "over-all-adjusted-panel-watt-holder"
+    "solar-charge-control-holder-holder"
+    "solar-charge-control-adjusted-holder"
+    "max-pv-of-panel-holder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Left-container-children stsrt */
+/* Over-All-Actual-Panel-Watt-Holder-Start */
+.left-child-container .over-all-actual-panel-watt-holder {
+  grid-area: over-all-actual-panel-watt-holder;
+  display: grid;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--charge-control-output-field-box-shadow);
+  position: relative;
+}
+.over-all-actual-panel-watt-holder .over-all-actual-panel-watt-title {
+  position: absolute;
+  left: 12.5rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--charge-control-output-field-color);
+  font-weight: bold;
+}
+.overallActualPanelWattValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--charge-control-output-font-color);
+}
+/* Over-All-Actual-Panel-Watt-Holder-End */
+
+/* Over-All-Adjusted-Panel-Watt-Holder-Start */
+.left-child-container .over-all-adjusted-panel-watt-holder {
+  grid-area: over-all-adjusted-panel-watt-holder;
+  display: grid;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--charge-control-output-field-box-shadow);
+  position: relative;
+}
+.over-all-adjusted-panel-watt-holder .over-all-adjusted-panel-watt-title {
+  position: absolute;
+  left: 12rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--charge-control-output-field-color);
+  font-weight: bold;
+}
+.overallAdjustedPanelWattValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--charge-control-output-font-color);
+}
+/* Over-All-Adjusted-Panel-Watt-Holder-End */
+
+/* Solar-Charge-Control-AH-For-Actual-Panel/Battery-holder-start */
+.left-child-container .solar-charge-control-holder-holder {
+  grid-area: solar-charge-control-holder-holder;
+  display: grid;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--charge-control-output-field-box-shadow);
+  position: relative;
+}
+.solar-charge-control-holder-holder .solar-charge-control-holder-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--charge-control-output-field-color);
+  font-weight: bold;
+}
+.solarChargeControlAHValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--charge-control-output-font-color);
+}
+/* Solar-Charge-Control-AH-For-Actual-Panel/Battery-holder-end */
+
+/* Solar-Charge-Control-AH-For-Adjusted-Panel/Battery-holder-start */
+.left-child-container .solar-charge-control-adjusted-holder {
+  grid-area: solar-charge-control-adjusted-holder;
+  display: grid;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--charge-control-output-field-box-shadow);
+  position: relative;
+}
+.solar-charge-control-adjusted-holder .solar-charge-control-adjusted-title {
+  position: absolute;
+  left: 7rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--charge-control-output-field-color);
+  font-weight: bold;
+}
+.solarChargeControlAdjustedAHValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--charge-control-output-font-color);
+}
+/* Solar-Charge-Control-AH-For-Adjusted-Panel/Battery-holder-end */
+
+/* Max-PV-Of-Solar-Panel-Start */
+.left-child-container .max-pv-of-panel-holder {
+  grid-area: max-pv-of-panel-holder;
+  display: grid;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  border-radius: 0.8rem;
+  background-color: var(--main-wrapper-children-background-color);
+  box-shadow: var(--charge-control-output-field-box-shadow);
+  position: relative;
+}
+.max-pv-of-panel-holder .max-pv-of-panel-title {
+  position: absolute;
+  left: 13rem;
+  top: -0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.2rem;
+  color: var(--charge-control-output-field-color);
+  font-weight: bold;
+}
+.maxPvOfSolarPanelValue {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  color: var(--charge-control-output-font-color);
+}
+/* Max-PV-Of-Solar-Panel-End */
+/* Left-container-children end */
+/* left-child-container ends here */
+
+/* Right-child-container start here */
+.right-child-container {
+  grid-area: right-child-container;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "chargeControlVoltHolder"
+    "chargeControlEfficiencyHolder"
+    "chargeControlMarginalSafetyHolder"
+    "solarPanelPvHolder";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Solar-Charge-Control-Volt-Holder-start */
+.chargeControlVoltHolder {
+  grid-area: chargeControlVoltHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.chargeControlVoltHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.chargeControlVoltHolder label {
+  position: absolute;
+  left: 15rem;
+  top: 1.9rem;
+  color: var(--charge-control-input-field-font-color);
+  font-weight: bold;
+}
+
+.chargeControlVoltHolder input:focus ~ label,
+.chargeControlVoltHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--charge-control-label-transition-font-color);
+}
+/* Solar-Charge-Control-Volt-Holder-end */
+
+/* Charge-Control-Efficiency-Holder-Start */
+.chargeControlEfficiencyHolder {
+  grid-area: chargeControlEfficiencyHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.chargeControlEfficiencyHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.chargeControlEfficiencyHolder label {
+  position: absolute;
+  left: 14rem;
+  top: 1.9rem;
+  color: var(--charge-control-input-field-font-color);
+  font-weight: bold;
+}
+
+.chargeControlEfficiencyHolder input:focus ~ label,
+.chargeControlEfficiencyHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--charge-control-label-transition-font-color);
+}
+/* Charge-Control-Efficiency-Holder-End */
+
+/* Charge-Control-Marginal-Safety-Holder-Start */
+.chargeControlMarginalSafetyHolder {
+  grid-area: chargeControlMarginalSafetyHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.chargeControlMarginalSafetyHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.chargeControlMarginalSafetyHolder label {
+  position: absolute;
+  left: 16rem;
+  top: 1.9rem;
+  color: var(--charge-control-input-field-font-color);
+  font-weight: bold;
+}
+
+.chargeControlMarginalSafetyHolder input:focus ~ label,
+.chargeControlMarginalSafetyHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--charge-control-label-transition-font-color);
+}
+/* Charge-Control-Marginal-Safety-Holder-End */
+
+/* Solar-Panel-PV-Start */
+.solarPanelPvHolder {
+  grid-area: solarPanelPvHolder;
+  border: var(--input-field-border);
+  border-radius: 0.4rem;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  padding: 0.2rem;
+  position: relative;
+}
+
+.solarPanelPvHolder input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: var(--input-field-font-color);
+}
+.solarPanelPvHolder label {
+  position: absolute;
+  left: 16rem;
+  top: 1.9rem;
+  color: var(--charge-control-input-field-font-color);
+  font-weight: bold;
+}
+
+.solarPanelPvHolder input:focus ~ label,
+.solarPanelPvHolder input:not(:placeholder-shown) ~ label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 1s;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: var(--charge-control-label-transition-font-color);
+}
+/* Solar-Panel-PV-End */
+
+/* Submit-All-Proceed-start */
+.proceedBtn {
+  border: none;
+  background-color: var(--submit-to-proceed-background);
+  box-shadow: var(--charge-control-submit-to-proceed-box-shadow);
+  border-radius: 0.5rem;
+  min-height: 5rem;
+  /* max-height: 5rem; */
+  cursor: pointer;
+  color: var(--submit-to-proceed-font-color);
+  font-weight: bold;
+}
+.proceedBtn:hover {
+  background-color: var(--charge-control-submit-hover-background-color);
+  color: var(--charge-control-submit-to-proceed-hover-color);
+  transition: 2s;
+  box-shadow: var(--charge-control-submit-to-proceed-hover-box-shadow);
+  font-weight: bold;
+}
+/* Submit-All-Proceed-end */
+/* Right-child-container ends here */
+/* Main ends here */

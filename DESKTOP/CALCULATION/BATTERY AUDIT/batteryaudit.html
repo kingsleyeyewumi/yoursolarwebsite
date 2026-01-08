@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./batteryaudit.css" />
+    <link rel="stylesheet" href="../../../../controlbox.css" />
+    <link rel="stylesheet" href="./MAIN/batteryauditmain.css" />
+    <link rel="stylesheet" href="./NAV/batteryauditnav.css" />
+    <link rel="icon" href="./IMAGES/kingphoto.jpg" />
+
+    <!-- Ipad Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../IPAD/BATTERY/ipadbattery.css"
+      media="(min-width: 767px) and (max-width: 853px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../IPAD/ipadcontrolbox.css"
+      media="(min-width: 767px) and (max-width: 853px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../IPAD/BATTERY/MAIN/ipadbatterymain.css"
+      media="(min-width: 767px) and (max-width: 853px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../IPAD/BATTERY/NAV/ipadbatterynav.css"
+      media="(min-width: 767px) and (max-width: 853px)"
+    />
+    <!-- Ipad Resolution End -->
+
+    <!-- Mobile Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../MOBILE/BATTERY/mobilebattery.css"
+      media="(min-width: 682px) and (max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../MOBILE/mobilecontrolbox.css"
+      media="(min-width: 682px) and (max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../MOBILE/BATTERY/MAIN/mobilebatterymain.css"
+      media="(min-width: 682px) and (max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../MOBILE/BATTERY/NAV/mobilebatterynav.css"
+      media="(min-width: 682px) and (max-width: 767px)"
+    />
+    <!-- Mobile Resolution End -->
+
+    <!-- Small Mobile Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../SMALL MOBILE/BATTERY/smallmobilebattery.css"
+      media="(min-width: 590px) and (max-width: 712px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALL MOBILE/smallmobilecontrolbox.css"
+      media="(min-width: 590px) and (max-width: 712px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALL MOBILE/BATTERY/MAIN/smallmobilebatterymain.css"
+      media="(min-width: 590px) and (max-width: 712px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALL MOBILE/BATTERY/NAV/smallmobilebatterynav.css"
+      media="(min-width: 590px) and (max-width: 712px)"
+    />
+    <!-- Small Mobile Resolution End -->
+
+    <!-- Smaller Mobile Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../SMALLER MOBILE/BATTERY/smallermobilebattery.css"
+      media="(min-width: 510px) and (max-width: 590px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALLER MOBILE/smallermobilecontrolbox.css"
+      media="(min-width: 510px) and (max-width: 590px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALLER MOBILE/BATTERY/MAIN/smallermobilebatterymain.css"
+      media="(min-width: 510px) and (max-width: 590px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALLER MOBILE/BATTERY/NAV/smallermobilebatterynav.css"
+      media="(min-width: 510px) and (max-width: 590px)"
+    />
+    <!-- Smaller Mobile Resolution End -->
+
+    <!-- Smallest Mobile Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../SMALLEST MOBILE/BATTERY/smallestmobilebattery.css"
+      media="(min-width: 450px) and (max-width: 510px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALLEST MOBILE/smallestmobilecontrolbox.css"
+      media="(min-width: 450px) and (max-width: 510px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALLEST MOBILE/BATTERY/MAIN/smallestmobilebatterymain.css"
+      media="(min-width: 450px) and (max-width: 510px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALLEST MOBILE/BATTERY/NAV/smallestmobilebatterynav.css"
+      media="(min-width: 450px) and (max-width: 510px)"
+    />
+    <!-- Smallest Mobile Resolution End -->
+
+    <!-- Button Phone Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../BUTTON PHONE/BATTERY/buttonphonebattery.css"
+      media="(min-width: 392px) and (max-width: 450px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../BUTTON PHONE/buttonphonecontrolbox.css"
+      media="(min-width: 392px) and (max-width: 450px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../BUTTON PHONE/BATTERY/MAIN/buttonphonebatterymain.css"
+      media="(min-width: 392px) and (max-width: 450px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../BUTTON PHONE/BATTERY/NAV/buttonphonebatterynav.css"
+      media="(min-width: 392px) and (max-width: 450px)"
+    />
+    <!-- Button Phone Resolution End -->
+
+    <!-- Small Button Phone Resolution Start -->
+    <link
+      rel="stylesheet"
+      href="../../../SMALL BUTTON PHONE/BATTERY/smallbuttonphonebattery.css"
+      media="(max-width: 392px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALL BUTTON PHONE/smallbuttonphonecontrolbox.css"
+      media="(max-width: 392px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALL BUTTON PHONE/BATTERY/MAIN/smallbuttonphonebatterymain.css"
+      media="(max-width: 392px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../SMALL BUTTON PHONE/BATTERY/NAV/smallbuttonphonebatterynav.css"
+      media="(max-width: 392px)"
+    />
+    <!-- Small Button Phone Resolution End -->
+  </head>
+  <body>
+    <p class="newPara"></p>
+    <p class="tryb"></p>
+    <!-- Wrapper Container starts here -->
+    <div id="wrapper-container">
+      <!-- NAV start -->
+      <nav>
+        <!-- Left Arrow start -->
+        <div class="left-arrow-container">
+          <a href="../../LOAD AUDIT/loadaudit.html" title="Back To Load Audit">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+        <!-- Left Arrow end -->
+
+        <!-- Nav Header Font start -->
+        <div class="header-font-container">
+          <h1>Battery Audit</h1>
+        </div>
+        <!-- Nav Header Font end -->
+
+        <!-- Right Arrow start -->
+        <div class="right-arrow-container">
+          <a href="../PANNEL AUDIT/pannelaudit.html" title="Go To Pannel Audit">
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <!-- Right Arrow end -->
+      </nav>
+      <!-- NAV end -->
+
+      <!-- MAIN start -->
+      <main>
+        <!-- Main-Wrapper-Container start here -->
+        <div class="main-wrapper-container">
+          <!-- Left-Child-Container start here -->
+          <div class="left-child-container">
+            <!--  -->
+            <!-- Total-Enegy-Consumption-WH -start -->
+            <div class="total-energy-consumption-holder">
+              <p class="total-energy-title">Total Energy Consumption (WH)</p>
+              <div class="totalEnergyConsumptionValue"></div>
+            </div>
+            <!-- Total-Enegy-Consumption-WH-end -->
+
+            <!-- Total-Enegy-Consumption-KW -start -->
+            <div class="total-energy-KW">
+              <p class="total-energy-KW-title">Total Energy Consumption (KW)</p>
+              <div class="totalEnergyKWValue"></div>
+            </div>
+            <!-- Total-Enegy-Consumption-KW-end -->
+
+            <!-- Actual-Battery-Capacity-(AH)-start -->
+            <div class="actual-battery-capacity-holder">
+              <p class="actual-battery-capacity-title">
+                Actual Battery Capacity (AH)
+              </p>
+              <div class="actualBatteryCapacityValue"></div>
+            </div>
+            <!-- Actual-Battery-Capacity-(AH)-end -->
+
+            <!-- Actual-Battery-Capacity-(KWH)-start -->
+            <div class="actual-battery-KWH-holder">
+              <p class="actual-battery-KWH-title">
+                Actual Battery Capacity (KWH)
+              </p>
+              <div class="actualBatteryKWHValue"></div>
+            </div>
+            <!-- Actual-Battery-Capacity-(KWH)-end -->
+
+            <!-- Adjusted-Battery-Capacity-(AH)-start -->
+            <div class="adjusted-battery-AH-holder">
+              <p class="adjusted-battery-AH-title">
+                Adjusted Battery Capacity (AH)
+              </p>
+              <div class="adjustedBatteryAHValue"></div>
+            </div>
+            <!-- Adjusted-Battery-Capacity-(AH)-end -->
+
+            <!-- Adjusted-Battery-Capacity-(KWH)-start -->
+            <div class="adjusted-battery-KWH-holder">
+              <p class="adjusted-battery-KWH-title">
+                Adjusted Battery Capacity (KWH)
+              </p>
+              <div class="adjustedBatteryKWHValue"></div>
+            </div>
+            <!-- Adjusted-Battery-Capacity-(KWH)-end -->
+
+            <!-- Number-Of-Battery-Required-(AH)-start -->
+            <div class="number-of-battery-holder">
+              <p class="number-of-battery-title">
+                Number Of Battery Required For Actual Battery (AH)
+              </p>
+              <div class="numberOfBatteryValue"></div>
+            </div>
+            <!-- Number-Of-Battery-Required-(AH)-end -->
+
+            <!-- Number-Of-Battery-Required-For-Adjusted-Battery-(AH)-start -->
+            <div class="number-of-battery-adjusted-holder">
+              <p class="number-of-battery-adjusted-title">
+                Number Of Battery Required For Adjusted Battery (AH)
+              </p>
+              <div class="numberOfBatteryAdjustedValue"></div>
+            </div>
+            <!-- Number-Of-Battery-Required-For-Adjusted-Battery-(AH)-end -->
+          </div>
+          <!-- Left-Child-Container ends here -->
+
+          <!-- Right-Child-Container start here -->
+          <div class="right-child-container">
+            <!-- Battery-Volt-Holder-start -->
+            <div class="batteryVoltHolder">
+              <input type="text" id="batteryVolt" placeholder="" />
+              <label for="batteryVolt">Battery Voltage</label>
+            </div>
+            <!-- Battery-Volt-Holder-end -->
+
+            <!-- Days-Of-Autonomy-start -->
+            <div class="daysOfAutonomyHolder">
+              <input type="text" id="daysOfAutonomy" placeholder="" />
+              <label for="daysOfAutonomy">Days Of Autonomy</label>
+            </div>
+            <!-- Days-Of-Autonomy-end -->
+
+            <!-- Dept-Of-Discharge-start -->
+            <div class="deptOfDischargeHolder">
+              <input type="text" id="deptOfDischarge" placeholder="" />
+              <label for="deptOfDischarge">Dept Of Discharge</label>
+            </div>
+            <!-- Dept-Of-Discharge-end -->
+
+            <!-- Marginal-Safety-start -->
+            <div class="marginalSafetyHolder">
+              <input type="text" id="marginalSafety" placeholder="" />
+              <label for="marginalSafety">Marginal Safety</label>
+            </div>
+            <!-- Marginal-Safety-end -->
+
+            <!-- Battery-Efficiency-start -->
+            <div class="batteryEfficiencyHolder">
+              <input type="text" id="batteryEfficiency" placeholder="" />
+              <label for="batteryEfficiency">Battery Efficiency</label>
+            </div>
+            <!-- Battery-Efficiency-end -->
+
+            <!-- Battery-Size-Choosen-start -->
+            <div class="batterySizeChoosenHolder">
+              <input type="text" id="batterySizeChoosen" placeholder="" />
+              <label for="batterySizeChoosen">Battery Size Choosen</label>
+            </div>
+            <!-- Battery-Size-Choosen-end -->
+
+            <!-- Submit ALL start -->
+            <button class="proceedBtn">Proceed</button>
+            <!-- Submit ALL end -->
+          </div>
+          <!-- Right-Child-Container ends here -->
+        </div>
+        <!-- Main-Wrapper-Container ends here -->
+      </main>
+      <!-- MAIN end -->
+    </div>
+    <!-- Wrapper Container ends here -->
+    <script type="module" src="./MAIN/batteryauditmain.mjs"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Calculation start */
+.calcBtn {
+  grid-area: calcBtn;
+  /* border: 2px solid red; */
+  min-height: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.calcBtn p {
+  /* border: 2px solid red; */
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: rgb(238, 107, 107);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.calcBtn p:hover {
+  color: rgb(97, 205, 241);
+  transition: 1s;
+}
+
+.calcItemsContainer {
+  display: grid;
+  grid-area: auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  position: absolute;
+  min-width: 38rem;
+  min-height: 5rem;
+  background-color: rgb(69, 146, 169);
+  border-radius: 0.3rem;
+  text-align: center;
+  line-height: 3rem;
+  padding: 0.5rem;
+  top: 4rem;
+  right: 16rem;
+  animation: calc;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes calc {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    transform: translateY(50%);
+  }
+}
+
+.calcItemsContainer a {
+  text-decoration: none;
+}
+.calcItemsContainer a p {
+  color: rgb(237, 237, 239);
+  animation: calc;
+  animation-duration: 2s;
+}
+.calcItemsContainer a p:hover {
+  background-color: rgb(240, 238, 238);
+  color: rgba(10, 83, 108, 0.8);
+  font-style: italic;
+  transition: 2s;
+}
+.calcItemsHide {
+  display: none;
+}
+
+.closeCalcItemsContainer {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  color: rgb(239, 242, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: closeBtn;
+  animation-duration: 8s;
+  background-color: transparent;
+  border: none;
+}
+@keyframes closeBtn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    transform: scale(0.5, 1);
+  }
+}
+.closeCalcItemsContainer:hover {
+  color: rgb(213, 31, 31);
+}
+/* Calculation end */

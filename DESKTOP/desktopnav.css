@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  grid-area: nav;
+  /* border: 2px solid rgb(29, 29, 150); */
+  background-color: var(--frontPage-nav-background-color);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "logoContainer logoContainer otherItemsContainer otherItemsContainer otherItemsContainer otherItemsContainer otherItemsContainer carocellContainer";
+  position: sticky;
+  top: 0px;
+  min-height: 4rem;
+}
+
+/* Other Nav items start  */
+.otherItemsContainer {
+  grid-area: otherItemsContainer;
+  /* border: 2px solid gold; */
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "home about services calcBtn contact";
+  align-items: center;
+  /* gap: 0.5rem; */
+}
+/* Other Nav items end  */
